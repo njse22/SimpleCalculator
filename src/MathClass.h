@@ -8,7 +8,7 @@
 #define max(a,b) ((a)>(b) ? (a) : (b))
 #define min(a,b) ((a)<(b) ? (a) : (b))
 #define equ(a,b) ((a)==(b))
-#define isPrime(a) (a%2 != 0)
+#define isInPair(a) (a%2 != 0)
 #define isPair(a) (a%2 == 0)
 
 using namespace std; 
