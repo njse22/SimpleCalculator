@@ -34,6 +34,13 @@ class MathClass{
 
     }
 
+    long long int factorial(int a){
+        int r = 1; 
+        for(int i = 1 ; i < a, i++){
+            r*=i; 
+        }
+        return r; 
+    }
 
 
 
