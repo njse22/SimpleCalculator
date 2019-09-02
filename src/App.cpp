@@ -5,8 +5,6 @@
 
 using namespace std; 
 
-//double division(int a , int b); 
-
 int main(){
     MathClass m{}; 
 
@@ -23,7 +21,8 @@ int main(){
          << "9 . to determine if one number is pair.\n"
          << "10. to determine if one number is not pair.\n"
          << "11. to use the factorial operation.\n"
-         << "12. to use exponencial operation.\n"<< endl; 
+         << "12. to use exponencial operation.\n"
+	 << "13. to calculate the sin of x.\n" << endl; 
          
         int option{0};
         cin >> option; 
@@ -85,7 +84,7 @@ int main(){
                     cin >> a; 
                     cout << "write the second number: " << endl;
                     cin >> b; 
-                    cout << "the result of "<< a << "/" << b << " is: " << m.division(a,b) 
+                    cout << "the result of "<< a << "/" << b << " is: " << m.division(a,b)
                     << "\ndo you want continue whit the program ?.\n"
                     << " (-1) for exit , (0) for continue" << endl;
                     cin >> option; 
@@ -176,6 +175,15 @@ int main(){
                 cin >> option; 
 
             }
+	    else if(option == 13){
+	    	cout << "this option calculate the sin of x" << endl; 
+		cout << "write the number of x" << endl;
+	       	cin >> a; 
+		cout << "the sin of " << a << " is: " << m.sin(a) << endl; 
+		cout << "do you want continue with the program ?.\n"
+		     << "(-1) for exit, (0) for continue." << endl; 
+		cin >> option; 	
+	    }
             
         }
 

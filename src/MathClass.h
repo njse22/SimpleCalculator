@@ -15,7 +15,7 @@ using namespace std;
 
 class MathClass{
     public:
-        int exponencial(int a , int b){
+        long long int exponencial(int a , int b){
             int i =0;
             int temp =a;
             while(i < b-1){
@@ -25,12 +25,15 @@ class MathClass{
         return a;
         }
 
-        double division(int a , int b){
+        float division(int a , int b){
             long long int inf = INT_MAX; 
             if(b == 0)
                 return inf;
-            else 
-                return static_cast < double > (a/b) ; 
+            else{
+		float c = static_cast <float> (a); 
+	    	float d = static_cast <float> (b); 	
+                return (c/d) ; 
+	    }
 
         }
 
@@ -41,8 +44,33 @@ class MathClass{
             }
             return r; 
         }
+	
+	float sin(int x){
+		long long int cota = 10; 
+		int n = 0; 
+		float angle = x; 
+		for(int i = 0; i < cota ; i++){
+			n = i*2+1; 
+			if(i%2== 0){
+				angle += eDivision( exponencial(x,n)/factorial(n) );
+			}else{
+				angle -= eDivision( exponencial(x,n)/factorial(n) ); 
+			}
+		}
+		return angle; 
+	}
 
-
+	private: 
+		float eDivision(long long int a ,long long int b ){
+			long long int inf = INT_MAX;
+	        	    if(b == 0)
+                		return inf;
+            		else{
+                		float c = static_cast <float> (a);
+                		float d = static_cast <float> (b);
+                		return (c/d) ;
+            		}
+		}
 
 
 }; 
